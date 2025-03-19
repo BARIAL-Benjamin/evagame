@@ -1,0 +1,22 @@
+Options -Indexes
+
+# Activer le module de réécriture
+RewriteEngine On
+
+# Rediriger les URLs sans extension vers les fichiers HTML ou PHP correspondants
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirige "/x" vers "/pages/x.html"
+RewriteRule ^([a-z]+)$ /pages/$1.html [L]
+
+# Redirige uniquement "/" vers "/index.html"
+RewriteRule ^$ /index.html [L]
+
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https?://evangelion\.benjapied\.com [NC]
+RewriteRule \.(jpe?g|png|gif|bmp|webp|svg)$ - [NC,F,L]
+
+ErrorDocument 500 /errors/500.html
+ErrorDocument 403 /errors/403.html
+ErrorDocument 404 /errors/404.html

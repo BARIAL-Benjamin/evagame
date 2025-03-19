@@ -1,0 +1,13 @@
+# Dossier de dev et dépendances
+node_modules
+ts
+# Fichiers personnels
+.hintrc
+*.xml
+*.txt
+*.py
+*-lock.json
+package.json
+
+# Fichiers de configuration
+*config.js*

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Jersey";
+    src: url("./fonts/Jersey10-Regular.ttf") format("truetype");
+}
+
+#evagame {
+    image-rendering: "pixelated";
+    border: "2px solid #000";
+    background-position: "center";
+    background-size: "cover";
+    background-repeat: "no-repeat";
+}
