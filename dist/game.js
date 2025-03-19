@@ -331,7 +331,7 @@ var Engine = (function () {
         var _this = this;
         var _b, _c, _d, _e, _f;
         this.player = new Children();
-        this.size = { width: window.innerWidth / 2, height: window.innerHeight / 2 };
+        this.size = { width: Math.round(window.innerWidth / 2), height: Math.round(window.innerHeight / 2) };
         this.audioContext = new AudioContext();
         this.gain = this.audioContext.createGain();
         this.keyPressed = {};
@@ -406,7 +406,7 @@ var Engine = (function () {
         this.prepareEngine({
             width: "".concat(this.canvas.width, "px"),
             height: "".concat(this.canvas.height, "px"),
-            backgroundImage: 'url("./sprites/backgrounds/main-large.png")'
+            backgroundImage: 'url("/sprites/backgrounds/main-large.png")'
         });
         this.statement();
     };
@@ -497,11 +497,11 @@ var Engine = (function () {
     };
     Engine.prototype.lobby = function () {
         var _this = this;
-        this.prepareEngine({ backgroundImage: 'url("./sprites/backgrounds/main-large.png")' });
+        this.prepareEngine({ backgroundImage: 'url("/sprites/backgrounds/main-large.png")' });
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.playSound(this.backgroundSound);
         var img = new Image();
-        img.src = './sprites/logo.png';
+        img.src = '/sprites/logo.png';
         img.onload = function () {
             var sizeImage = {
                 width: img.width,
@@ -530,7 +530,7 @@ var Engine = (function () {
     };
     Engine.prototype.settings = function () {
         this.prepareEngine({
-            backgroundImage: "url('./sprites/backgrounds/settings.webp')"
+            backgroundImage: "url('/sprites/backgrounds/settings.webp')"
         });
     };
     Engine.prototype.prepareEngine = function (css) {
@@ -543,7 +543,7 @@ var Engine = (function () {
         var _this = this;
         if (this.stage) {
             this.prepareEngine({
-                backgroundImage: "url(\"./sprites/backgrounds/stage_".concat(this.stage, ".webp\")")
+                backgroundImage: "url(\"/sprites/backgrounds/stage_".concat(this.stage, ".webp\")")
             });
             this.engine = setInterval(function () {
                 _this.update();
@@ -555,12 +555,12 @@ var Engine = (function () {
     };
     Engine.prototype.win = function () {
         this.prepareEngine({
-            backgroundImage: "url('./sprites/backgrounds/win.webp')"
+            backgroundImage: "url('/sprites/backgrounds/win.webp')"
         });
     };
     Engine.prototype.defeat = function () {
         this.prepareEngine({
-            backgroundImage: "url('./sprites/backgrounds/defeat.webp')"
+            backgroundImage: "url('/sprites/backgrounds/defeat.webp')"
         });
     };
     Engine.prototype.checkCollision = function (entity1, entity2) {
@@ -625,7 +625,7 @@ var Engine = (function () {
     Engine.prototype.toggleSoundIcon = function (sound, isSoundOn) {
         var _this = this;
         var img = new Image();
-        img.src = isSoundOn ? './sprites/soundOn-small.png' : './sprites/soundOff-small.png';
+        img.src = isSoundOn ? '/sprites/soundOn-small.png' : '/sprites/soundOff-small.png';
         img.onload = function () {
             var Element = {
                 id: Engine.createUID(),

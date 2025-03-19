@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/assets/favicon/favicon-tiny.webp" type="image/webp">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/keyboards.css" />
     <link rel="stylesheet" href="/css/switch.css" />
+    <script type="module" src="/dist/game.js" defer></script>
     <script type="module" src="/js/darkmode.min.js" defer></script>
     <title>EvaGame</title>
 </head>
@@ -31,7 +33,34 @@
         </aside>
     </header>
     <main>
-        <section>SECTION</section>
+        <section>
+            <h1>EvaGame : En développement</h1>
+            <canvas id="evagame"></canvas>
+            <article>
+                <p>EvaGame est un jeu de tire, il consiste à tuer des anges sur plusieurs niveau.</p>
+                Touches :
+                <ul>
+                    <li>Droite :
+                        <button class="kbc-button kbc-button-xs">D</button>
+                    </li>
+                    <li>Gauche :
+                        <button class="kbc-button kbc-button-xs">Q</button>
+                    </li>
+                    <li>Saut :
+                        <button class="kbc-button kbc-button-xs">Z</button>
+                    </li>
+                    <li>S'allonger :
+                        <button class="kbc-button kbc-button-xs">S</button>
+                    </li>
+                    <li>Tirer :
+                        <button class="kbc-button kbc-button-xs">clique gauche</button>
+                    </li>
+                    <li>Pause :
+                        <button class="kbc-button kbc-button-xs">echap</button>
+                    </li>
+                </ul>
+            </article>
+        </section>
         <footer><div>&copy;2025 <a href="https://benjapied.com">benjapied.com</a> - BonjourBenjamin</div></footer>
     </main>
     <map name="logo"><area shape="rect" coords="0, 0, 10000, 10000" href="/" alt="Home" /></map>
