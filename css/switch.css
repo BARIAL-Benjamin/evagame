@@ -1,37 +1,35 @@
-input[type="checkbox"] {
-    position: fixed;
-    top: 10px;
-    right: 10px;
+#darkmode {
+    position: relative;
     width: 80px;
     height: 40px;
     -webkit-appearance: none;
     background: var(--secondary-bg-color);
     outline: none;
     border-radius: 20px;
-    box-shadow: inset 0 0 5px #0003;
+    box-shadow: inset 0 0 10px var(--primary-bg-color);;
     transition: .5s;
     cursor: pointer;
-}
 
-input:checked[type="checkbox"] {
-    background: var(--secondary-bg-color);
-}
+    &:before {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        background: var(--primary-bg-color);
+        transform: scale(1.1);
+        box-shadow: 0 0 5px var(--primary-bg-color);
+        transition: .5s;
+        filter: drop-shadow(0 0 5px var(--secondary-bg-color));
+    }
 
-input[type="checkbox"]:before {
-    content: "";
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    top: 0;
-    left: 0;
-    background: var(--primary-bg-color);
-    transform: scale(1.1);
-    box-shadow: 0 2px 5px #0003;
-    transition: .5s;
-    filter: drop-shadow(0 0 5px var(--secondary-bg-color));
-}
+    &:checked[type="checkbox"] {
+        background: var(--secondary-bg-color);
 
-input:checked[type="checkbox"]:before {
-    left: 40px;
+        &:before {
+            left: 40px;
+        }
+    }
 }
