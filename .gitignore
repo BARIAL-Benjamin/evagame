@@ -1,13 +1,20 @@
 # Dossier de dev et dépendances
 node_modules
-ts
+# ts
+
 # Fichiers personnels
 .hintrc
 *.xml
 *.txt
 *.py
-*-lock.json
-package.json
+# *-lock.json
+# package.json
 
 # Fichiers de configuration
-*config.js*
+# *config.js*
+
+# Pas besoin d'envoyer
+# **/PNG
+
+#Exceptions
+!robots.txt

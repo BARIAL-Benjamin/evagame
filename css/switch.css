@@ -8,8 +8,9 @@ input[type="checkbox"] {
     background: var(--secondary-bg-color);
     outline: none;
     border-radius: 20px;
-    box-shadow: inset 0 0 5px rgba(255, 0, 0, 0.2);
-    transition: 0.7s;
+    box-shadow: inset 0 0 5px #0003;
+    transition: .5s;
+    cursor: pointer;
 }
 
 input:checked[type="checkbox"] {
@@ -26,8 +27,8 @@ input[type="checkbox"]:before {
     left: 0;
     background: var(--primary-bg-color);
     transform: scale(1.1);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: 0.5s;
+    box-shadow: 0 2px 5px #0003;
+    transition: .5s;
     filter: drop-shadow(0 0 5px var(--secondary-bg-color));
 }
 

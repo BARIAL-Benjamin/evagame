@@ -336,7 +336,13 @@ var Engine = (function () {
         this.gain = this.audioContext.createGain();
         this.keyPressed = {};
         this.engine = 0;
-        this.entities = (_a = {}, _a[this.player.id] = this.player, _a);
+        this.entities = (_a = {},
+            _a[this.player.id] = {
+                position: this.player.position,
+                size: this.player.hitbox,
+                update: this.player.update,
+            },
+            _a);
         this.clickableElements = {};
         this.slidersElements = {};
         this.isMuted = false;
@@ -604,7 +610,11 @@ var Engine = (function () {
         else {
             e = new Children(entity.position);
         }
-        this.entities[e.id] = e;
+        this.entities[e.id] = {
+            position: e.position,
+            size: e.hitbox,
+            update: e.update,
+        };
     };
     Engine.prototype.checkInputsEntries = function () {
         var _this = this;

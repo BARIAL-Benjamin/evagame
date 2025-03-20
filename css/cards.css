@@ -1,0 +1,71 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2em;
+    font-size: xx-large;
+}
+
+.carte {
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1.2s;
+    cursor: pointer;
+    perspective: 1500px;
+}
+
+.carte:hover {
+    transform: rotateY(0.5turn);
+}
+
+.face {
+    position: absolute;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--secondary-bg-color);
+    overflow: hidden;
+}
+
+.recto img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.verso {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1em;
+    transform: rotateY(0.5turn);
+    overflow-y: scroll;
+    background-color: var(--primary-bg-color);
+    font-size: large;
+
+    > h3,
+    h4,
+    h5,
+    p {
+        text-align: justify;
+        text-overflow: ellipsis;
+        color: var(--primary-text-color);
+    }
+
+    > p {
+        margin: 0.25em;
+    }
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--primary-bg-color);
+        border-radius: 50%;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: var(--secondary-bg-color);
+        border-radius: 5px;
+    }
+}

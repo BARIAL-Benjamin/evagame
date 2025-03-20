@@ -88,8 +88,8 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: calc(100% - 4em);
-        width: calc(100svw - (var(--header-size) + 1em));
+        width: calc(100svw - (var(--header-size) + 3em));
+        min-height: calc(100svh - 4em);
         padding: 1em;
         > h1 {
             padding: 1em;
@@ -117,12 +117,26 @@ main {
                 justify-content: space-around;
             }
         }
+        > table {
+            tr {
+                display: grid;
+                grid-template-columns: 5em 10em 1fr;
+            }
+            td {
+                justify-content: center;
+                text-align: justify;
+            }
+            th {
+                font-size: larger;
+            }
+        }
     }
     > footer {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         font-size: large;
+        padding: 1em;
         color: var(--primary-text-color);
         a {
             color: var(--primary-text-color);

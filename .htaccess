@@ -7,16 +7,22 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
+# Redirige "/a/<type>/<taille>/<version>?" vers "/assets/<type>/<type>-<taille>-?<version>?.webp"
+RewriteRule ^a/([a-z]+)/(hd|large|medium|small|tiny)/([a-z0-9]+)$ /assets/$1-$2-$3.webp [L]
+RewriteRule ^a/([a-z]+)/(hd|large|medium|small|tiny)/?$ /assets/$1-$2.webp [L]
+
+# Redirige "/c/<personnage>/<taille>" vers "/images/characters/<personnage>-<taille>.webp"
+RewriteRule ^c/([a-z]+)/(hd|large|medium|small|tiny)/?$ /images/characters/$1-$2.webp [L]
+
 # Redirige "/x" vers "/pages/x.html"
-RewriteRule ^([a-z]+)$ /pages/$1.html [L]
+RewriteRule ^([a-z-]+)/?$ /pages/$1.html [L]
 
 # Redirige uniquement "/" vers "/index.html"
 RewriteRule ^$ /index.html [L]
 
 RewriteCond %{HTTP_REFERER} !^$
-RewriteCond %{HTTP_REFERER} !^https?://evangelion\.benjapied\.com [NC]
-RewriteRule \.(jpe?g|png|gif|bmp|webp|svg)$ - [NC,F,L]
+RewriteCond %{HTTP_REFERER} !^https?://eva\.benjapied\.com [NC]
 
-ErrorDocument 500 /errors/500.html
-ErrorDocument 403 /errors/403.html
-ErrorDocument 404 /errors/404.html
+ErrorDocument 500 /pages/500.html
+ErrorDocument 403 /pages/403.html
+ErrorDocument 404 /pages/404.html
