@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/a/favicon/tiny" type="image/webp">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/prisme.css">
     <link rel="stylesheet" href="/css/switch.min.css" />
     <script type="module" src="/js/darkmode.min.js" defer></script>
     <title>EvaGame</title>
@@ -16,8 +17,9 @@
         <aside>
             <div>
                 <img src="/a/logo/small/" alt="Logo du site version 8 bits" usemap="#logo"
-                    sizes="(max-width: 154px) 154px,(max-width: 307px) 307px, 714px"
-                    srcset="/a/logo/small/ 154w, /a/logo/medium/ 307w, /a/logo/large/ 714w">
+                    sizes="(max-width: 154px) 154px,(max-width: 307px) 307px, 714px" srcset="/a/logo/small/ 154w,
+                            /a/logo/medium/ 307w,
+                            /a/logo/large/ 714w">
             </div>
             <nav>
                 <ul>
@@ -36,7 +38,22 @@
         </aside>
     </header>
     <main>
-        <section></section>
+        <section>
+            <div class="scene">
+                <div class="prisme">
+                    <div class="face front"></div>
+                    <div class="face back"></div>
+                    <div class="face left"></div>
+                    <div class="face right"></div>
+                </div>
+                <div class="prisme">
+                    <div class="inverse face front"></div>
+                    <div class="inverse face back"></div>
+                    <div class="inverse face left"></div>
+                    <div class="inverse face right"></div>
+                </div>
+            </div>
+        </section>
         <footer>
             <div>&copy;2025 <a href="https://eva.benjapied.com">eva.benjapied.com</a> - BonjourBenjamin</div>
         </footer>

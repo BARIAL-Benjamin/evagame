@@ -8,7 +8,7 @@ if (!switchDLM) throw new Error("Impossible de trouver le bouton pour le darkmod
 /**
  * @type { "dark" | "light" }
  */
-const mode = localStorage.getItem('mode') ?? "light";
+const mode = localStorage.getItem('mode') ?? "dark";
 let modeLink = document.head.querySelector('#mode');
 if (!modeLink) {
     modeLink = document.createElement('link');

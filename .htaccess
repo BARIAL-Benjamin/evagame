@@ -14,6 +14,9 @@ RewriteRule ^a/([a-z]+)/(hd|large|medium|small|tiny)/?$ /assets/$1-$2.webp [L]
 # Redirige "/c/<personnage>/<taille>" vers "/images/characters/<personnage>-<taille>.webp"
 RewriteRule ^c/([a-z]+)/(hd|large|medium|small|tiny)/?$ /images/characters/$1-$2.webp [L]
 
+# Redirige "/p/<number>" vers "/images/characters/<personnage>-<taille>.webp"
+RewriteRule ^p/([a-z0-9.+]+)/?$ /images/previews/$1.webp [L]
+
 # Redirige "/x" vers "/pages/x.html"
 RewriteRule ^([a-z-]+)/?$ /pages/$1.html [L]
 
