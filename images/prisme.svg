@@ -1,9 +1,0 @@
-<svg viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
-    <g class="prisme">
-        <polygon points="50,10 90,80 10,80" fill="deepskyblue" stroke="white" />
-        <polygon points="50,10 90,80 50,90" fill="dodgerblue" stroke="white" />
-        <polygon points="50,10 10,80 50,90" fill="mediumblue" stroke="white" />
-        <polygon points="50,150 10,80 50,90" fill="mediumblue" stroke="white" />
-        <polygon points="50,150 90,80 50,90" fill="dodgerblue" stroke="white" />
-    </g>
-</svg>
