@@ -1,21 +1,6 @@
 @font-face {
-    font-family: "Jersey 10";
-    src: url("./fonts/Jersey10-Regular.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Jersey 15";
-    src: url("./fonts/Jersey15-Regular.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Jersey 20";
-    src: url("./fonts/Jersey20-Regular.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Jersey 25";
-    src: url("./fonts/Jersey25-Regular.ttf") format("truetype");
+    font-family: "Matisse Pro";
+    src: url("./fonts/VTDHFL-MatissePro-B.ttf") format("truetype");
 }
 
 :root {
@@ -34,7 +19,7 @@ html {
     width: 100%;
     display: flex;
     flex-direction: row;
-    font-family: "Jersey 20";
+    font-family: "Jersey 20", "Matisse Pro";
     background-color: var(--primary-bg-color);
     z-index: 0;
 }
@@ -359,7 +344,7 @@ main {
             grid-template-columns: 1fr 15em;
             background-color: var(--primary-bg-color);
             color: var(--primary-text-color);
-            width: 50%;
+            width: 75%;
             margin: auto;
             padding: 1em;
             border-radius: 10px;
@@ -372,11 +357,16 @@ main {
                 > * {
                     margin: 0.5em;
                 }
-                
-                > img {
-                    height: 400px;
-                    width: 200px;
-                    transform: rotateZ(.75turn) translate(0, 40%);
+
+                > div {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    > img {
+                        transform: rotate(90deg);
+                        height: 400px;
+                        width: 200px;
+                    }
                 }
             }
 
