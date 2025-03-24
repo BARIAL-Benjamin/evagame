@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/prisme.css">
     <link rel="stylesheet" href="/css/switch.min.css" />
+    <script src="/js/modules/hls.min.js"></script>
     <script type="module" src="/js/darkmode.min.js" defer></script>
+    <script type="module" src="/js/modules/video.min.js" defer></script>
     <title>EvaGame</title>
 </head>
 
@@ -17,7 +19,8 @@
         <aside>
             <div>
                 <img src="/a/logo/small/" alt="Logo du site version 8 bits" usemap="#logo"
-                    sizes="(max-width: 154px) 154px,(max-width: 307px) 307px, 714px" srcset="/a/logo/small/ 154w,
+                    sizes="(max-width: 154px) 154px,(max-width: 307px) 307px, 714px"
+                    srcset="/a/logo/small/ 154w,
                             /a/logo/medium/ 307w,
                             /a/logo/large/ 714w">
             </div>
@@ -38,18 +41,7 @@
         </aside>
     </header>
     <main>
-        <video autoplay loop>
-            <source src="/assets/menu-tiny.webm" type="video/webm"
-                sizes="(max-width: 360px) 360px, (max-width: 480px) 480px, (max-width: 720px) 720px, 1080px" srcset="/assets/menu-tiny.mp4 360w,
-                    /assets/menu-small.webm 480w,
-                    /assets/menu-medium.webm 720w,
-                    /assets/menu-large.webm 1080w">
-            <source src="/assets/menu-tiny.mp4" type="video/mp4"
-                sizes="(max-width: 360px) 360px, (max-width: 480px) 480px, (max-width: 720px) 720px, 1080px" srcset="/assets/menu-tiny.mp4 360w,
-                            /assets/menu-small.mp4 480w,
-                            /assets/menu-medium.mp4 720w,
-                            /assets/menu-large.mp4 1080w">
-        </video>
+        <video id="videoPlayer" loop autoplay></video>
         <section>
             <div class="ramiel">
                 <div class="prisme">

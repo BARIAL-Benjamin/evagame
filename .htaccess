@@ -11,6 +11,9 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^a/([a-z]+)/(hd|large|medium|small|tiny)/([a-z0-9]+)$ /assets/$1-$2-$3.webp [L]
 RewriteRule ^a/([a-z]+)/(hd|large|medium|small|tiny)/?$ /assets/$1-$2.webp [L]
 
+# Redirige "/a/<type>/<taille>/<format>" vers "/assets/<type>/<type>-<taille>.<format>"
+RewriteRule ^v/([a-z]+)/(hd|large|medium|small|tiny)/(webm|mp4)$ /videos/$1-$2.$3 [L]
+
 # Redirige "/c/<personnage>/<taille>" vers "/images/characters/<personnage>-<taille>.webp"
 RewriteRule ^c/([a-z]+)/(hd|large|medium|small|tiny)/?$ /images/characters/$1-$2.webp [L]
 
