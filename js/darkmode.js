@@ -30,7 +30,7 @@ switchDLM.addEventListener('change', () => {
         modeLink.id = 'mode'
         modeLink.rel = 'stylesheet';
         modeLink.type = 'text/css';
-        modeLink.href = `/css/${mode}.css`;
+        modeLink.href = `/css/${mode}.min.css`;
         document.head.appendChild(modeLink);
     }
     modeLink.href = `/css/${mode}.css`;
