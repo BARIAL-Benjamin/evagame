@@ -8,7 +8,8 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 # Redirige "/a/<type>/<taille>/<version>?" vers "/assets/<type>/<type>-<taille>-?<version>?.webp"
-RewriteRule ^a/([a-z]+)/(hd|large|medium|small|tiny)/([a-z0-9]+)$ /assets/$1-$2-$3.webp [L]
+RewriteRule ^a/([a-z]+)/(svg)/?$ /assets/$1.svg [L]
+RewriteRule ^a/([a-z]+)/(hd|large|medium|small|tiny)/([a-z0-9]+)/?$ /assets/$1-$2-$3.webp [L]
 RewriteRule ^a/([a-z]+)/(hd|large|medium|small|tiny)/?$ /assets/$1-$2.webp [L]
 
 # Redirige "/a/<type>/<taille>/<format>" vers "/assets/<type>/<type>-<taille>.<format>"

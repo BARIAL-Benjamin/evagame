@@ -45,34 +45,34 @@ header {
     margin: 0 1em;
     z-index: 1;
 
-    >aside {
+    > aside {
         display: flex;
         flex-direction: column;
         height: 100svh;
 
-        >div {
+        > div {
             background-color: var(--primary-bg-color);
             border-radius: 10px;
             margin: 1em 0 0;
             padding: 0.5em;
 
-            >img {
+            > img {
                 width: 100%;
                 filter: drop-shadow(0 0 5px var(--secondary-bg-color));
             }
         }
 
-        >nav {
+        > nav {
             background-color: var(--primary-bg-color);
             margin: 1em 0;
             height: 100%;
             border-radius: 10px;
 
-            >ul {
+            > ul {
                 list-style: none;
                 margin: 0 1em;
 
-                >li {
+                > li {
                     display: flex;
                     align-items: center;
                     padding: 1em;
@@ -103,7 +103,7 @@ main {
     padding-left: calc(var(--header-size) + 1em);
     height: 100%;
 
-    >video {
+    > video {
         position: absolute;
         top: -20px;
         left: -20px;
@@ -112,7 +112,7 @@ main {
         filter: blur(10px);
     }
 
-    >section {
+    > section {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -121,7 +121,7 @@ main {
         padding: 1em;
         z-index: 1;
 
-        >h1 {
+        > h1 {
             padding: 1em;
             margin: 1em auto;
             border-radius: 10px;
@@ -130,12 +130,12 @@ main {
             filter: invert();
         }
 
-        >canvas {
+        > canvas {
             margin: auto;
             border-radius: 10px;
         }
 
-        >article {
+        > article {
             background-color: var(--primary-bg-color);
             color: var(--primary-text-color);
             filter: invert();
@@ -154,7 +154,7 @@ main {
 
             &#bestiary {
                 #eva01 {
-                    >ul {
+                    > ul {
                         filter: invert();
 
                         .stand {
@@ -193,7 +193,7 @@ main {
                 }
 
                 #eva02 {
-                    >ul {
+                    > ul {
                         filter: invert();
 
                         .stand {
@@ -221,10 +221,10 @@ main {
                 }
 
                 #ange {
-                    >ul {
+                    > ul {
                         filter: invert();
 
-                        >li {
+                        > li {
                             width: 64px;
                             height: 98px;
                         }
@@ -233,7 +233,7 @@ main {
             }
         }
 
-        >table {
+        > table {
             tr {
                 display: grid;
                 grid-template-columns: 5em 10em 1fr 192px;
@@ -257,25 +257,25 @@ main {
                 }
             }
 
-            >caption {
+            > caption {
                 font-size: 32px;
                 margin: 0.25em;
                 border-bottom: 1px solid var(--secondary-bg-color);
                 color: var(--primary-text-color);
             }
 
-            >thead {
+            > thead {
                 position: sticky;
                 top: 0;
                 background-color: var(--primary-bg-color);
 
-                >tr>th {
+                > tr > th {
                     padding: 1em;
                 }
             }
 
-            >tbody {
-                >tr {
+            > tbody {
+                > tr {
                     max-height: calc(144px + 1.5em);
                     overflow: hidden;
                     cursor: pointer;
@@ -284,7 +284,7 @@ main {
                         max-height: inherit;
                     }
 
-                    >td {
+                    > td {
                         display: flex;
                         justify-content: center;
                         height: inherit;
@@ -293,7 +293,7 @@ main {
                         text-overflow: ellipsis;
                         padding: 0.5em;
 
-                        >img {
+                        > img {
                             width: 100%;
                             object-fit: contain;
                         }
@@ -302,13 +302,13 @@ main {
             }
         }
 
-        >details {
+        > details {
             color: var(--primary-text-color);
             font-size: xx-large;
             padding-bottom: 0.5em;
             border-bottom: 1px solid var(--secondary-bg-color);
 
-            >ul {
+            > ul {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(20, 1fr);
@@ -330,12 +330,12 @@ main {
             }
         }
 
-        >section {
+        > section {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1em;
 
-            >article {
+            > article {
                 background-color: var(--primary-bg-color);
                 color: var(--primary-text-color);
                 filter: invert();
@@ -343,19 +343,53 @@ main {
                 padding: 1em;
                 border-radius: 10px;
 
-                >h3 {
+                > h3 {
                     font-size: larger;
                 }
 
-                >p {
+                > p {
                     text-align: justify;
                     font-size: large;
                 }
             }
         }
+
+        > div {
+            display: grid;
+            grid-template-columns: 1fr 15em;
+            background-color: var(--primary-bg-color);
+            color: var(--primary-text-color);
+            width: 50%;
+            margin: auto;
+            padding: 1em;
+            border-radius: 10px;
+            text-align: justify;
+
+            > div {
+                display: flex;
+                flex-direction: column;
+
+                > * {
+                    margin: 0.5em;
+                }
+                
+                > img {
+                    height: 400px;
+                    width: 200px;
+                    transform: rotateZ(.75turn) translate(0, 40%);
+                }
+            }
+
+            > aside {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 1em;
+            }
+        }
     }
 
-    >footer {
+    > footer {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
