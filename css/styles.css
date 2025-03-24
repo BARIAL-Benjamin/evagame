@@ -344,28 +344,32 @@ main {
             grid-template-columns: 1fr 15em;
             background-color: var(--primary-bg-color);
             color: var(--primary-text-color);
-            width: 75%;
+            width: 100%;
             margin: auto;
             padding: 1em;
             border-radius: 10px;
             text-align: justify;
 
-            > div {
-                display: flex;
-                flex-direction: column;
-
-                > * {
-                    margin: 0.5em;
-                }
+            &#about {
+                width: 75%;
 
                 > div {
                     display: flex;
-                    flex-direction: row;
-                    justify-content: space-around;
-                    > img {
-                        transform: rotate(90deg);
-                        height: 400px;
-                        width: 200px;
+                    flex-direction: column;
+
+                    > * {
+                        margin: 0.5em;
+                    }
+
+                    > div {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        > img {
+                            transform: rotate(90deg);
+                            height: 400px;
+                            width: 200px;
+                        }
                     }
                 }
             }
